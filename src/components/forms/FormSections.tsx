@@ -93,7 +93,7 @@ const FormSections = ({
 		setCurrentlyEmployed(toggle);
 	};
 
-	const handleButtonClick = (e: HTMLFormElement) => {
+	const handleSubmit = (e: HTMLFormElement) => {
 		e.preventDefault();
 
 		const form = new FormData(e.currentTarget);
@@ -167,7 +167,7 @@ const FormSections = ({
 			currentlyEmployed={currentlyEmployed}
 			setCurrentlyEmployed={setCurrentlyEmployed}
 			personalInputChangeHandler={personalInputChangeHandler}
-			handleButtonClick={handleButtonClick}
+			handleSubmit={handleSubmit}
 			addEducation={addEducation}
 			addWorkExperience={addWorkExperience}
 			removeWorkExperience={removeWorkExperience}

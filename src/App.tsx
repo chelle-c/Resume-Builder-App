@@ -2,35 +2,13 @@ import { useState } from 'react';
 import Header from './components/Header.tsx';
 import FormSections from './components/forms/FormSections.tsx';
 import ResumePreview from './components/ResumePreview.tsx';
+import {
+	PersonalInfo,
+	EducationInfo,
+	WorkExperience,
+	AppProps,
+} from './AppTypes.ts';
 import './styles/App.scss';
-
-type PersonalInfo = {
-	fullName: string;
-	emailAddress: string;
-	phoneNumber: string;
-	location: string;
-};
-
-type EducationInfo = {
-	schoolName: string;
-	degree: string;
-	startMonth: string;
-	startYear: string;
-	endMonth: string;
-	endYear: string;
-};
-
-type WorkExperience = {
-	workplace: string;
-	position: string;
-	startMonth: string;
-	startYear: string;
-	endMonth: string;
-	endYear: string;
-	summary: string;
-};
-
-type AppProps = {};
 
 const App = ({}: AppProps): JSX.Element => {
 	const [personalInfo, setPersonalInfo] = useState<PersonalInfo>({
@@ -78,8 +56,7 @@ const App = ({}: AppProps): JSX.Element => {
 	]);
 
 	return (
-		<div
-			className={`container max-w-full pb-10 bg-gray-700`}>
+		<div className={`container max-w-full pb-10 bg-gray-700`}>
 			<Header />
 			<div className='mx-auto container--app'>
 				<div className='flex flex-col justify-center max-w-full px-6 mx-auto xl:flex-row'>
@@ -95,13 +72,15 @@ const App = ({}: AppProps): JSX.Element => {
 						currentlyEmployed={currentlyEmployed}
 						setCurrentlyEmployed={setCurrentlyEmployed}
 					/>
-					<ResumePreview
-						personalInfo={personalInfo}
-						educationInfo={educationInfo}
-						workExperience={workExperience}
-						graduatedSchool={graduatedSchool}
-						currentlyEmployed={currentlyEmployed}
-					/>
+					<div className='resume md:min-w-full lg:min-w-[20cm]'>
+						<ResumePreview
+							personalInfo={personalInfo}
+							educationInfo={educationInfo}
+							workExperience={workExperience}
+							graduatedSchool={graduatedSchool}
+							currentlyEmployed={currentlyEmployed}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

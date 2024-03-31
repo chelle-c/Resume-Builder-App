@@ -14,12 +14,12 @@ const FormComponent = ({
 	addEducation,
 	addWorkExperience,
 	removeWorkExperience,
-	handleButtonClick,
+	handleSubmit,
 }: any): JSX.Element => {
 	return (
 		<form
 			className='items-center w-full max-w-full m-0 mr-6 container--form'
-			onSubmit={handleButtonClick}>
+			onSubmit={handleSubmit}>
 			<>
 				<div
 					id='personalInfoContainer'
@@ -128,7 +128,7 @@ const FormComponent = ({
 							)}
 						</div>
 						<button
-							className='w-full px-5 py-3 my-3 text-base font-semibold text-center text-white bg-green-700 rounded-lg shadow-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800'
+							className='w-full px-5 py-3 my-3 mb-2 text-base font-semibold text-center text-white rounded-lg bg-gradient-to-r from-green-600 via-green-700 to-green-800 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 me-2'
 							type='button'
 							onClick={addEducation}>
 							Add another school
@@ -190,7 +190,7 @@ const FormComponent = ({
 							)}
 						</div>
 						<button
-							className='w-full px-5 py-3 my-3 text-base font-semibold text-center text-white bg-green-700 rounded-lg shadow-lgocus:outline-none hover:bg-green-800 focus:ring-4 focus:ring-green-300 dark:bg-green-700 dark:hover:bg-green-800 dark:focus:ring-green-700'
+							className='w-full px-5 py-3 my-3 mb-2 text-base font-semibold text-center text-white rounded-lg bg-gradient-to-r from-green-600 via-green-700 to-green-800 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 me-2'
 							type='button'
 							onClick={addWorkExperience}>
 							Add another work experience
@@ -200,7 +200,7 @@ const FormComponent = ({
 			</>
 			<div className='w-full mt-3 mb-6 text-gray-900 dark:text-gray-200'>
 				<button
-					className='w-full px-5 py-3 text-base font-semibold text-center text-white bg-blue-700 rounded-lg shadow-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+					className='w-full px-5 py-3 mb-2 text-base font-semibold text-center text-white bg-blue-700 rounded-lg shadow-lg bg-gradient-to-r from-cyan-600 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 me-2'
 					type='submit'>
 					Update resume
 				</button>
