@@ -33,9 +33,6 @@ type WorkExperience = {
 type AppProps = {};
 
 const App = ({}: AppProps): JSX.Element => {
-	const [darkMode, setDarkMode] = useState<boolean>(
-		window.matchMedia('(prefers-color-scheme: dark)').matches ? true : false
-	);
 	const [personalInfo, setPersonalInfo] = useState<PersonalInfo>({
 		fullName: 'Jane Doe',
 		emailAddress: 'janedoe@email.com',
@@ -80,16 +77,10 @@ const App = ({}: AppProps): JSX.Element => {
 		false,
 	]);
 
-	const toggleDarkMode = () => {
-		setDarkMode((prevDarkMode: boolean) => !prevDarkMode);
-	};
-
 	return (
 		<div
-			className={`container max-w-full pb-10 bg-white ${
-				darkMode ? 'dark' : 'light'
-			}`}>
-			<Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+			className={`container max-w-full pb-10 bg-gray-700`}>
+			<Header />
 			<div className='mx-auto container--app'>
 				<div className='flex flex-col justify-center max-w-full px-6 mx-auto xl:flex-row'>
 					<FormSections

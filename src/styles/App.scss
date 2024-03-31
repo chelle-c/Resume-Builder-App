@@ -31,15 +31,11 @@
 		max-height: min-content;
 		margin: 0;
 		border-radius: 16px;
-		transition-property: max-height;
-		transition-duration: 0.5s;
 		background-color: theme('colors.white');
 
 		&-closed {
 			height: min-content;
 			max-height: 5em;
-			transition-property: max-height;
-			transition-duration: 1.5s;
 		}
 
 		&__arrow {
@@ -56,16 +52,12 @@
 			display: flex;
 			max-height: min-content;
 			padding: 0 1.5em 1.5em 1.5em;
-			transition-property: max-height;
-			transition-duration: 0.3s;
-			transition-delay: 0s;
+			transition: max-height 0.15s ease-out;
 
 			&-closed {
 				display: none;
 				max-height: 0;
-				transition-property: display, max-height;
-				transition-duration: 0.75s;
-				transition-delay: 0.5s;
+				transition: max-height 1s ease 0s;
 			}
 		}
 	}
