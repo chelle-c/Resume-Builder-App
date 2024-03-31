@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  margin: 0;
+  padding: 0;
+  @apply font-sans;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+       text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+label {
+  @apply text-left block uppercase tracking-wide text-gray-700 text-sm font-semibold mb-2;
+}
+
+input {
+  @apply font-mono;
+}
+input[type=text] {
+  @apply text-base appearance-none block w-full border border-gray-200 py-2 px-3 focus:outline-none focus:bg-white focus:border-gray-500;
+}
+input[type=checkbox] {
+  @apply mr-2 leading-tight bg-white border border-gray-300 rounded;
+}
+input.input-group {
+  @apply rounded-s-none;
+}
+
+textarea {
+  @apply font-mono text-base appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 py-2 px-4 focus:outline-none focus:bg-white focus:border-gray-500 rounded;
+}
+
+select {
+  @apply font-mono text-base block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-2 px-4 pr-8 rounded focus:outline-none focus:bg-white focus:border-gray-500;
+}
+
+.dark {
+  @apply bg-gray-900 text-zinc-50;
+}
+.dark header {
+  @apply bg-gray-800;
+}
+.dark .container--section {
+  @apply bg-gray-800;
+}
+.dark label {
+  @apply text-gray-200;
+}
+.dark input,
+.dark select,
+.dark textarea {
+  @apply bg-gray-900 text-zinc-50;
+}
+.dark input:focus,
+.dark input :hover,
+.dark input :active,
+.dark select:focus,
+.dark select :hover,
+.dark select :active,
+.dark textarea:focus,
+.dark textarea :hover,
+.dark textarea :active {
+  @apply bg-gray-700 text-zinc-100;
+}/*# sourceMappingURL=index.css.map */
